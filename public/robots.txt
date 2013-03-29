@@ -1,0 +1,4 @@
+# Block all site crawlers by default. 
+# Comment out these lines to allow everything later.
+User-Agent: *
+Disallow: /

@@ -1,0 +1,8 @@
+<head>
+  <meta charset="utf-8">
+  <title><%= "#{content_for(:title)} | " if content_for?(:title) %>Client Name</title>
+  <%= render "shared/meta" %>
+  <%= stylesheet_link_tag "application", media:"all" %>
+  <%= requirejs_include_tag %>
+  <%= csrf_meta_tags %>
+</head>

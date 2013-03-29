@@ -1,0 +1,17 @@
+/* TEAM */
+
+Company: Client name
+Site: http://example.com
+Twitter: @example
+Location: Washington, DC, United States of America
+
+Company: Threespot Media
+Site: http://threespot.com
+Twitter: @threespot
+Location: Washington, DC, United States of America
+
+/* SITE */
+
+Standards: HTML5, CSS3, HTTP
+Components: jQuery, Ruby, Ruby on Rails, Heroku, PostgreSQL, Amazon S3
+Software: Textmate, Sublime, Transmit, Photoshop, Kaleidoscope

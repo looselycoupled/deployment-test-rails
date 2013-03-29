@@ -1,0 +1,34 @@
+<%# DO NOT add an X-UA-Compatible meta tag here. Rails already sends this header %>
+
+<%# Remember this needs to be an icon bundle with 16px and 32px in it %>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<%# Have the browser do an eager DNS domain name prefetch for our bucket %>
+<link rel="dns-prefetch" href="//<%= ENV['S3_BUCKET_NAME'] %>.s3.amazonaws.com">
+
+<%# Search engine metadata %>
+<link rel="author" href="<%= content_for?(:rel_author).presence || "/humans.txt" %>">
+<meta name="author" content="<%= content_for?(:author).presence || "Client Name" %>">
+<link rel="canonical" href="<%= url_for(only_path:false) %>">
+<meta name="description" content="<%= content_for(:description) %>">
+
+<%# Facebook meta tags %>
+<meta property="og:title" content="<%= content_for?(:title).presence || "Client Name" %>">
+<meta property="og:description" content="<%= content_for(:description) %>">
+<meta property="og:url" content="<%= url_for(only_path:false) %>">
+<meta property="og:type" content="<%= content_for?(:og_type).presence || "website" %>">
+<meta property="og:image" content="<%= content_for?(:og_image).presence || "/og-image.png" %>">
+
+<%# iOS meta tags %>
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-title" content="Client Name">
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
+
+<%# Windows 8 metro pinned sites %>
+<meta name="application-name" content="Client Name">
+<meta name="msapplication-TileImage" content="/msapplication-tileimage.png">
+<meta name="msapplication-TileColor" content="#de1587">
